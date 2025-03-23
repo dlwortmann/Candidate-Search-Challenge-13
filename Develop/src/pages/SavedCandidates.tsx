@@ -1,3 +1,6 @@
+import React from 'react';
+import { useEffect, useState } from 'react';
+import SavedCandidateList from '../components/SavedCandidateList.tsx'
 const SavedCandidates = () => {
   return (
     <>
