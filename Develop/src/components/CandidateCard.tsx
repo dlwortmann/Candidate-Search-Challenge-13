@@ -18,11 +18,12 @@ const CandidateCard = ({currentCandidate, addToSavedCandidateList}: CandidateCar
                 <p>username: {currentCandidate.username}</p>
                 <p>Location: {currentCandidate.location}</p>
                 <p>Email: {currentCandidate.email}</p>
-                <p>HTML: {currentCandidate.html_url}</p>
                 <p>Company: {currentCandidate.company}</p>
+                <p>Bio: {currentCandidate.bio}</p>
+
             </article>
             {/* figure out how to add button for addtoSavedCandidateList */}
-            <button className='add-candidate' onClick={() => addToSavedCandidateList}></button>
+            <button className='add-candidate' onClick={() => addToSavedCandidateList}>Add Candidate</button>
         </section>
         </>
     )

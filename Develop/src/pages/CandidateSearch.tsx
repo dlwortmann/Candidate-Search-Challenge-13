@@ -13,6 +13,7 @@ const CandidateSearch = () => {
     email: '',
     html_url: '',
     company: '',
+    bio: ''
   })
 
   const [searchInput, setSearchInput] = useState<string>('');
@@ -36,19 +37,7 @@ const CandidateSearch = () => {
 
   return (
     <>
-      <h1>CandidateSearch</h1>;
-      <section>
-        <form onSubmit={(event: FormEvent) => searchForCandidates(event, searchInput)}>
-          <input type='text'
-            name=''
-            id=''
-            placeholder='Enter a name'
-            onChange={(e) => setCurrentCandidate(searchInput)} />;
-          <button type='submit' id='searchBtn'>
-            Search
-          </button>
-        </form>
-      </section>
+      <h1>Candidate Search</h1>
       <CandidateCard
         currentCandidate={currentCandidate}
         addToSavedCandidateList={addToSavedCandidates} />

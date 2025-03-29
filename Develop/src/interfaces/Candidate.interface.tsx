@@ -6,6 +6,7 @@ interface Candidate {
     readonly avatar: string;
     readonly email: string;
     readonly html_url: string;
+    readonly bio: string;
     readonly company: string;
 }
 
