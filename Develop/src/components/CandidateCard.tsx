@@ -23,7 +23,8 @@ const CandidateCard = ({currentCandidate, addToSavedCandidateList}: CandidateCar
 
             </article>
             {/* figure out how to add button for addtoSavedCandidateList */}
-            <button className='add-candidate' onClick={() => addToSavedCandidateList}>Add Candidate</button>
+            <button className='add-candidate' 
+            onClick={() => addToSavedCandidateList}>Add Candidate</button>
         </section>
         </>
     )

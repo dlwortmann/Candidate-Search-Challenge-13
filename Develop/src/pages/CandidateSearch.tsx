@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { searchGithub, searchGithubUser } from '../api/API';
 import Candidate from '../interfaces/Candidate.interface';
-import { FormEvent } from 'react';
 import CandidateCard from '../components/CandidateCard';
 // useEffect and searchGithub were in starter code, were should the be included?
 const CandidateSearch = () => {
@@ -16,7 +15,23 @@ const CandidateSearch = () => {
     bio: ''
   })
 
-  const [searchInput, setSearchInput] = useState<string>('');
+ 
+// useEffect
+//   const searchForCandidates = () => {
+  
+//     const data: Candidate = await searchGithub();
+//     return setCurrentCandidate(currentCandidate);
+//   }
+
+
+//   useEffect(() => {
+//     const loadCandidates = async () => {
+//       const user = await searchGithub();
+//       const profile = await searchGithubUser();
+      
+//     }
+//     return loadCandidates(profile)
+//   })
 
   const addToSavedCandidates = () => {
     let parsedSavedCandidates: Candidate[] = [];
@@ -28,13 +43,8 @@ const CandidateSearch = () => {
     localStorage.setItem('savedCandidate', JSON.stringify(parsedSavedCandidates))
   };
 
-  const searchForCandidates = async (event: FormEvent, candidate: string) => {
-    event.preventDefault();
-    const data: Candidate = await searchGithubUser(candidate);
-
-    setCurrentCandidate(data);
-  }
-
+ 
+  
   return (
     <>
       <h1>Candidate Search</h1>

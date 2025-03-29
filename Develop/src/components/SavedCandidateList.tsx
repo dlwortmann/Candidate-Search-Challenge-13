@@ -7,7 +7,7 @@ interface SavedCandidatesProps {
     savedCandidates: Candidate[];
 }
 
-const SavedCandidates = ({ savedCandidates }: SavedCandidatesProps) => {
+const SavedCandidatesList = ({ savedCandidates }: SavedCandidatesProps) => {
     console.log(savedCandidates)
     return (
         <>
@@ -22,4 +22,4 @@ const SavedCandidates = ({ savedCandidates }: SavedCandidatesProps) => {
     )
 }
 
-export default SavedCandidates
+export default SavedCandidatesList
