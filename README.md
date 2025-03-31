@@ -17,7 +17,7 @@ This application is used to search Github for users that could be potential cand
 
 ## Live URL
 
-[Link to Deployed App using Render] (https://candidate-search-challenge-13.onrender.com)
+[Link to Deployed App using Render] (https://candidate-search-challenge-13-1.onrender.com)
 
 ## Installation
 1. Clone the repo onto your machine using the command "git clone" using the SSH key from the repository.
