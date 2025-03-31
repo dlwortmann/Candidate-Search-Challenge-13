@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import { searchGithub, searchGithubUser } from '../api/API';
+import { useState, } from 'react'; // add useEffect back in
+//import { searchGithub, searchGithubUser } from '../api/API';
 import Candidate from '../interfaces/Candidate.interface';
 import CandidateCard from '../components/CandidateCard';
 // useEffect and searchGithub were in starter code, were should the be included?
 const CandidateSearch = () => {
-  const [currentCandidate, setCurrentCandidate] = useState<Candidate>({
+  const [currentCandidate, _setCurrentCandidate] = useState<Candidate>({
     name: '',
     username: '',
     location: '',

@@ -1,4 +1,4 @@
-import type React from 'react';
+//nimport type React from 'react';
 import type Candidate from "../interfaces/Candidate.interface"
 
 type CandidateCardProps = {

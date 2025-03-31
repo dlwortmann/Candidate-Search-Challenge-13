@@ -1,4 +1,4 @@
-import type React from 'react';
+//import type React from 'react';
 import type Candidate from '../interfaces/Candidate.interface';
 import CandidateCard from './CandidateCard.tsx';
 //import SavedCandidates from '../pages/SavedCandidates';
@@ -10,7 +10,7 @@ interface SavedCandidatesProps {
 const SavedCandidatesList = ({ savedCandidates }: SavedCandidatesProps) => {
     console.log(savedCandidates)
     return (
-        <>
+        <div>
             <ul>
                 {savedCandidates.map((candidate) => (
                     <CandidateCard
@@ -18,7 +18,8 @@ const SavedCandidatesList = ({ savedCandidates }: SavedCandidatesProps) => {
                         key={candidate.name}
                     />
                 ))}
-            </ul></>
+            </ul>
+        </div>
     )
 }
 
