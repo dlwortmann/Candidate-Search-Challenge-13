@@ -15,7 +15,7 @@ const CandidateSearch = () => {
     bio: ''
   })
 
-  const [candidateArr, setCandidateArr] = useState<Candidate[]>([])
+  const [_candidateArr, setCandidateArr] = useState<Candidate[]>([])
 
   //useEffect
   //   const searchForCandidates = () => {
