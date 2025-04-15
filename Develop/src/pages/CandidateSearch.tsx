@@ -18,23 +18,23 @@ const CandidateSearch = () => {
   const [_candidateArr, setCandidateArr] = useState<Candidate[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
-  const findCandidate = async (username: string) => {
-    const singleUser = await searchGithubUser(username);
-    if (singleUser) {
-      setCurrentCandidate(singleUser);
-    } else {
-      setCurrentCandidate({
-        login: '',
-        name: null,
-        location: null,
-        avatar_url: '',
-        email: null,
-        html_url: '',
-        company: null,
-        bio: null,
-      });
-    }
-  };
+  // const findCandidate = async (username: string) => {
+  //   const singleUser = await searchGithubUser(username);
+  //   if (singleUser) {
+  //     setCurrentCandidate(singleUser);
+  //   } else {
+  //     setCurrentCandidate({
+  //       login: '',
+  //       name: null,
+  //       location: null,
+  //       avatar_url: '',
+  //       email: null,
+  //       html_url: '',
+  //       company: null,
+  //       bio: null,
+  //     });
+  //   }
+  // };
 
   useEffect(() => {
     const loadCandidates = async () => {
