@@ -15,7 +15,7 @@ const CandidateCard = ({currentCandidate, addToSavedCandidateList}: CandidateCar
                 <img src={`${currentCandidate.avatar_url || ''}`} alt={`${currentCandidate.name}`}/>
             </figure>
             <article className='info'>
-                <h2>{currentCandidate.name || 'No Name'}</h2>
+                <h2>{currentCandidate.name || currentCandidate.login}</h2>
                 <p>Location: {currentCandidate.location || 'N/A'}</p>
                 <p>Email: {currentCandidate.email || 'N/A'}</p>
                 <p>Company: {currentCandidate.company || 'N/A'}</p>

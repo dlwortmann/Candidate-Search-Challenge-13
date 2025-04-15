@@ -7,8 +7,11 @@ const SavedCandidates = () => {
   const [savedCandidates, setSavedCandidates] = useState<Candidate[]>([]);
 
   useEffect(() => {
-    const parsedSavedCandidates = JSON.parse(localStorage.getItem('savedCandidate') as string);
-    setSavedCandidates(parsedSavedCandidates)
+    const stored = localStorage.getItem('savedCandidates');
+    if (stored) {
+      const parsedSavedCandidates = JSON.parse(stored)
+      setSavedCandidates(parsedSavedCandidates)
+    }
   }, [])
   return (
     <>
