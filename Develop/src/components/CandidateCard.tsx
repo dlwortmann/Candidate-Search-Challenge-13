@@ -15,17 +15,18 @@ const CandidateCard = ({currentCandidate, addToSavedCandidateList}: CandidateCar
                 <img src={`${currentCandidate.avatar_url || ''}`} alt={`${currentCandidate.name}`}/>
             </figure>
             <article className='info'>
-                <h2>{currentCandidate.name || ''}</h2>
-                <p>username: {currentCandidate.username || ''}</p>
-                <p>Location: {currentCandidate.location || ''}</p>
-                <p>Email: {currentCandidate.email || ''}</p>
-                <p>Company: {currentCandidate.company || ''}</p>
-                <p>Bio: {currentCandidate.bio || ''}</p>
+                <h2>{currentCandidate.name || 'No Name'}</h2>
+                <p>Location: {currentCandidate.location || 'N/A'}</p>
+                <p>Email: {currentCandidate.email || 'N/A'}</p>
+                <p>Company: {currentCandidate.company || 'N/A'}</p>
+                <p>Bio: {currentCandidate.bio || 'N/A'}</p>
 
             </article>
             {/* figure out how to add button for addtoSavedCandidateList */}
-            <button className='add-candidate' 
-            onClick={() => addToSavedCandidateList}>Add Candidate</button>
+            <button className="next-candidate" color='red'
+            onClick={() => currentCandidate}>-</button>
+            <button className='add-candidate' color='green'
+            onClick={() => addToSavedCandidateList?.()}>+</button>
         </section>
         </>
     )

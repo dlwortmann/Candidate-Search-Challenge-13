@@ -19,7 +19,7 @@ const Nav = () => {
             <Link
               to="/SavedCandidates"
               className={currentPage === '/SavedCandidates' ? 'nav-link-active' : 'nav-link'}>
-              Saved Candidates
+              Potential Candidates
             </Link>
           </h2>
         </li>

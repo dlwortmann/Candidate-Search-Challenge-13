@@ -1,4 +1,6 @@
-const searchGithub = async () => {
+import Candidate from "../interfaces/Candidate.interface";
+
+const searchGithub = async (): Promise<{ login: string }[]> => {
   try {
     const start = Math.floor(Math.random() * 100000000) + 1;
     // console.log(import.meta.env);
@@ -23,7 +25,7 @@ const searchGithub = async () => {
   }
 };
 
-const searchGithubUser = async (username: string) => {
+const searchGithubUser = async (username: string): Promise<Candidate | null> => {
   try {
     const response = await fetch(`https://api.github.com/users/${username}`, {
       headers: {
@@ -36,8 +38,8 @@ const searchGithubUser = async (username: string) => {
     }
     return data;
   } catch (err) {
-    // console.log('an error occurred', err);
-    return {};
+     console.log('an error occurred', err);
+    return null;
   }
 };
 
